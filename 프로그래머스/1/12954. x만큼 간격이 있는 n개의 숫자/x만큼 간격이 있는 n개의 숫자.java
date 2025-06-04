@@ -1,15 +1,11 @@
-import java.util.*;
-
 class Solution {
     public long[] solution(int x, int n) {
-        long[] answer = {};
-        ArrayList<Long> list = new ArrayList<>();
-
-        for (int j = 1; j <= n; j++) {
-            list.add(x*(long)j);
+        long[] answer = new long[n];
+        long y = x;
+        for (int i = 0;i < n;i++) {
+            answer[i] = y;
+            y += x;
         }
-        answer = list.stream().mapToLong(Long::longValue).toArray();
-
         return answer;
     }
 }
